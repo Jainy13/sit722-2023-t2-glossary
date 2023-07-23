@@ -9,22 +9,24 @@
     <p>Welcome to my website showing a collection of DevOps terms and their brief descriptions.</p>
       <table style="width:100%">
         <tr>
+          <ul style="list-style: none;"></ul>
           <th>ID#</th>
           <th>Term</th>
           <th>Description</th>
           <th>References</th>
         </tr>
-        <tr>
-          <ul style="list-style: none;">
             <% list.forEach( (item) => { %>
-            <li>
+            <tr>
+              <ul style="list-style: none;">
+            <li> 
               <td><%= item.id %></td>
               <td><%= item.term %></td>
               <td><%= item.description %></td>
               <td><%= item.references %></td>
+            </ul>
             </li>
+            </ul>
           <% }) %>
-          </ul>
         </tr>
     </table>
   </body>

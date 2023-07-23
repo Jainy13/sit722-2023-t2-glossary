@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to my website showing a collection of DevOps terms and their brief descriptions.</p>
+      <table style="width:100%">
+        <tr>
+          <th>ID#</th>
+          <th>Term</th>
+          <th>Description</th>
+          <th>References</th>
+        </tr>
+        <tr>
+          <ul style="list-style: none;">
+            <% list.forEach( (item) => { %>
+            <li>
+              <td><%= item.id %></td>
+              <td><%= item.term %></td>
+              <td><%= item.description %></td>
+              <td><%= item.references %></td>
+            </li>
+          <% }) %>
+          </ul>
+        </tr>
+    </table>
+  </body>
+</html>
